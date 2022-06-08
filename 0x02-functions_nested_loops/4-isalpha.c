@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _isalpha - A function that checks for alphabetic character.
  *
