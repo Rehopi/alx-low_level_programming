@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - Entry point 
+ * main - Entry point
  *
  * Description: The program print _putchar
  * followed by a new line
@@ -17,7 +17,7 @@ _putchar (*bh);
 bh++;
 }
 _putchar('\n');
-  
+
 return (0);
 }
 
