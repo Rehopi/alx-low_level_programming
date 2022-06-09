@@ -9,16 +9,16 @@
  */
 int main(void)
 {
-  char *bh = "_putchar";
+char *bh = "_putchar";
 
-  while (*bh)
-    {
-      _putchar (*bh);
-      bh++;
-    }
-  _putchar('\n');
+while (*bh)
+{
+_putchar (*bh);
+bh++;
+}
+_putchar('\n');
   
-  return (0);
+return (0);
 }
 
        
