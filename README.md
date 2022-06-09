@@ -1,1 +1,1 @@
-This file is mandatory in all ALX School projects
+0x03-debuggingreamd me file 
