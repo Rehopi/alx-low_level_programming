@@ -19,6 +19,6 @@ for (i = 0; i < wall; i++)
 wall--;
 rev = s[i];
 s[i] = s[wall];
-s[fcounter] = rev
+s[wall] = rev
 } 
 }
