@@ -2,7 +2,6 @@
 
 /**
  * print_rev - prints a string in reverse, followed by a new line
- * wall is to first count to end, n is to count back
  * @s: string to print
  * Return: nothing
  */
@@ -17,7 +16,7 @@ for (i = 0; s[i] != '\0'; i++)
 wall++;
 }
 
-for (n = (fcounter - 1); n >= 0; n--)
+for (n = (wall - 1); n >= 0; n--)
 {      
 _putchar(s[n]);
 }
