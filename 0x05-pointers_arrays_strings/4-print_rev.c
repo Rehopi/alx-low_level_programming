@@ -17,8 +17,8 @@ wall++;
 }
 
 for (n = (wall - 1); n >= 0; n--)
-{      
+{
 _putchar(s[n]);
 }
-  _putchar('\n');
+_putchar('\n');
 }
