@@ -8,13 +8,13 @@
 void rev_string(char *s)
 {
 char rev = s[0];
-int fcounter = 0;
+int wall = 0;
 int i;
 
-while (s[fcounter] != '\0')
+while (s[wall] != '\0')
 wall++;
-  
-for (i = 0; i < fcounter; i++)
+
+for (i = 0; i < wall; i++)
 {
 wall--;
 rev = s[i];
