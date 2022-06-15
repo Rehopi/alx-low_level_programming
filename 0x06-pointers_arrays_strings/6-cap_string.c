@@ -1,11 +1,10 @@
 #include "main.h"
-
 /**
  * cap_string - capitalizes all words of a string
  * @str: string to change
  * Return: string changed
  */
-char *cap_string(char *);
+char *cap_string(char *str)
 {
 int i = 0, j = 0, tmp = 0;
 char sep[] = {'\n', ' ', '\t', ',', ';', '"',
@@ -25,7 +24,7 @@ break;
 if (i == 0 || tmp == 1)
 {
 if (str[i] > 96 && str[i] < 123)
-str[i] -= 32;
+str[i] -= 32
 }
 i++;
 }
