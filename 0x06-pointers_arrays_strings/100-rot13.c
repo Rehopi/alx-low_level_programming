@@ -12,7 +12,7 @@ int i, j;
 
 char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-  
+
 for (i = 0; s[i] != '\0'; i++)
 {
 for (j = 0; a[j] != '\0'; j++)
