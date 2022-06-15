@@ -1,28 +1,25 @@
 #include "main.h"
 
 /**
- * leet - Entry point
- * ONE if, TWO loops only...
- * @n: input
- * Return: Always 0 (Success)
+ * leet - encodes a string into 1337 replaced:
+ * a,A to 4 e,E to 3 o,O to 0 t,T to 7 l,L to 1
+ * @str: string to encode
+ * Return: a pointer to the encoded string
  */
-char *leet(char *n)
+char *leet(char *str)
 {
-int i, x;
-int find[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-int replacer[] = {'4', '3', '0', '7', '1'};
-
-for (i = 0; n[i] != '\0'; i++)
+int i = 0, j = 0;
+char s1[] = {'a', 'e', 'o', 't', 'l', 'A', 'E', 'O', 'T', 'L'};
+int s2[] = {4, 3, 0, 7, 1, 4, 3, 0, 7, 1};
+  
+while (str[i] != '\0')
 {
-for (x = 0; x <= 9; x++)
+for (j = 0; s1[j] != '\0'; j++)
 {
-if (n[i] == find[x])
-{
-n[i] = replacer[x / 2];
-x = ;
+if (str[i] == s1[j])
+str[i] = s2[j] + 48;
 }
+i++;
 }
-}
-
-return (n);
+return (str);
 }
