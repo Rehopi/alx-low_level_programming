@@ -3,18 +3,18 @@
 /**
  * factorial - returns the factorial of a given number
  *
- * @n: input
+ * @n: the number to find the factorials of
  *
  * Return: the factorial of @n
  */
 
-int factorial(int n);
+int factorial(int n)
 {
 if (n < 0)
-return(-1);
+return (-1);
 
 else if (n == 0)
-return(1);
+return (1);
 
 return (n * factorial(n - 1));
 }
