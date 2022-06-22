@@ -28,7 +28,7 @@ return (1);
  * Return: 0 if the number is not prime, and 1 if it is
  */
 
-int is_prime_number(int n) 
+int is_prime_number(int n)
 {
 return (primeFinder(n, 2));
 }
