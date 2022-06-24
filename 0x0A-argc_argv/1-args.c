@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "main.h"
-**
+/**
  * main - Entry Point
  * @argc: arguments
  * @argv: array pointing to arguments
