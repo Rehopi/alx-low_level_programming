@@ -8,7 +8,7 @@
  *
  * Return: 0 if runned with success
  */
-int main(int argc, char *argv[]) 
+int main(int argc, char *argv[])
 {
 int sum = 0, i = 1, k = 0, l = 0;
 char j;
@@ -26,7 +26,7 @@ printf("Error\n");
 return (1);
 }
 k++;
-}      
+}
 sum += atoi(argv[i]);
 }
 printf("%d\n", sum);
