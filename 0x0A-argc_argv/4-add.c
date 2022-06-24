@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlid.h>
-#iclude "main.h"
+#include "main.h"
 /**
  * main - Entry Point
  * @argc: arguments
@@ -10,7 +10,7 @@
 int main(int argc, char *argv[]) 
 {
 int i, sum = 0;
-  
+
 if (argc < 1)
 return (0);
 
