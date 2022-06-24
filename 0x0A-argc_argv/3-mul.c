@@ -3,7 +3,7 @@
 #include "main.h"
 /**
  * main - Entry Point
- * btc is a function that converts a string into an int
+ * atoi is a function that converts a string into an int
  * @argc: arguments
  * @argv: array pointing to arguments
  * Return: 0
@@ -21,7 +21,7 @@ else
 {
 for (i = 1; i < argc; i++)
 {
-res *= btc(argv[i]);
+res *= atoi(argv[i]);
 }
 printf("%d\n", res);
 }
