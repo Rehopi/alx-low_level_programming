@@ -6,7 +6,7 @@
  * @b: input amount
  * Return: pointer to new mem
  */
-void *malloc_checked(unsigned int b)
+char *create_array(unsigned int size, char c)
 {
 
 void *n;
