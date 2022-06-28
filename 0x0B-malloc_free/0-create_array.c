@@ -1,19 +1,23 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include "main.h"
 /**
- * malloc_checked - Entry Point
- * @b: input amount
- * Return: pointer to new mem
+ * create_array - create an array of chars, and initializes it
+ * with a specific char.
+ * @size: size of the array
+ * @c: specific char
+ * Return: a pointer to the array or null if fails
  */
-char *create_array(unsigned int size, char c)
+create_array(unsigned int size, char c)
 {
+char *arr = (char *)malloc(size * sizeof(c));
+unsigned int i;
 
-void *n;
-
-n = malloc(b);
-
-if (n == NULL)
-exit(98);
-return (n);
+if (size == 0 || arr == NULL)
+{
+arr = NULL;
+return (arr);
+}
+for (i = 0; i < size; i++)
+arr[i] = c;
+return (arr);
 }
