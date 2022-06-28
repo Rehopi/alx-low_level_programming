@@ -1,5 +1,7 @@
+#include <stdio>
 #include <stdlib.h>
 #include "main.h"
+
 /**
  * create_array - create an array of chars, and initializes it
  * with a specific char.
@@ -7,7 +9,7 @@
  * @c: specific char
  * Return: a pointer to the array or null if fails
  */
-create_array(unsigned int size, char c)
+char *create_array(unsigned int size, char c)
 {
 char *arr = (char *)malloc(size * sizeof(c));
 unsigned int i;
