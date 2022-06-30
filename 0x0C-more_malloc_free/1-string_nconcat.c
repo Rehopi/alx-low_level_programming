@@ -1,6 +1,6 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlid.h>
 /**
  * _strlen - returns the lenght of a string
  *@s: poiter of character
