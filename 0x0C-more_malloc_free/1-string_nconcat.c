@@ -1,6 +1,20 @@
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
+/**
+ * _strlen - returns the lenght of a string
+ *@s: poiter of character
+ *Return: the length of a string
+ */
+int _strlen(char *s) 
+{
+unsigned int len;
+
+len = 0;
+while (*(s + len) != '\0')
+len++;
+return (len);
+}
 /**
  * string_nconcat - len of 1st str, len of 2nd str, if n < 2nd, 2nd = n
  * 2nd + 1st = total len, malloc + null byte, loop to insert into temp arr
