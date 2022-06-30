@@ -1,58 +1,48 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlid.h>
-/**
- * _strlen - returns the lenght of a string
- *@s: poiter of character
- *Return: the length of a string
- */
-int _strlen(char *s) 
-{
-unsigned int len;
+#include <stdlib.h>
 
-len = 0;
-while (*(s + len) != '\0')
-len++;
-return (len);
-}
 /**
- * *string_nconcat - concatenates two strings
- *@s1: first string to concatenate
- *@s2: second string to concatenate
- *@n: number of bytes to concatenate
- *Return: the pointer concatenate or null
+ * string_nconcat - concatenates two strings
+ *
+ * @s1: first string
+ * @s2: second string
+ * @n: the number of bytes to include of @s2
+ *
+ * Return: newly allocated space in memory;
+ * NULL if the function fails
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int l1, i, j;
-char *str;
+char *ar;
+unsigned int i = 0;
+unsigned int j = 0;
+unsigned int m;
+unsigned int p;
+unsigned int k = 0;
+unsigned int len;
 
-/**verify if s1 or s2 is null*/
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
+while (s1[i])
+i++;
+while (s2[j])
+j++;
+if (j > n)
+j = n;
 
-/**calculate the lenght of the strings*/
-l1 = _strlen(s1);
+len = i + j;
 
-/**asign the memorty to the pointer*/
-str = malloc((l1 + (n * sizeof(*s2) + 1)) * sizeof(*str))
-
-/**Verify if the memory is avaiable*/
-if (str == NULL)
+ar = malloc(sizeof(char) * (len + 1));
+if (ar == NULL)
 return (NULL);
 
-/**Concatenate the string*/
-for (i = 0; s1[i] != '\0'; i++)
-{
-str[i] = s1[i];
-}
+for (p = 0; p < i; p++)
+ar[k++] = s1[p];
+for (m = 0; m < j; m++)
+ar[k++] = s2[m];
 
-for (j = 0; s2[j] != '\0' && j < n; j++, i++)
-{
-str[i] = s2[j];
-}
-str[i] = '\0';
-return (str);
+ar[k] = '\0';
+return (ar);
 }
