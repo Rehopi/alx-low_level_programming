@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _calloc - allocates memory for an array, using malloc 
+ * _calloc - allocates memory for an array, using malloc
  * @nmemb: the number of elements
  * @size: the size of that element type
  *
- * Return: a void point 
+ * Return: a void point
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
