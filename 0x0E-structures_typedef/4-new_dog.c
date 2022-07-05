@@ -1,53 +1,80 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "dog.h"
-int get_len(int i);
-char *str_cpy(char *dest, char *src);
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * new_dog - a function that creates a new dog
- * get len of name + owner, malloc them, cpy name + owner to new
- * @name: name
- * @age: age
- * @owner: owner
- * Return: 0
+ * _strlen - returns the lenght of a string
+ *@s: poiter of character
+ *Return: the length of a string
+ */
+int _strlen(char *s)
+{
+int len;
+
+len = 0;
+while (*(s + len) != '\0')
+len++;
+return (len);
+}
+
+/**
+ * *_strcpy - copies the string pointed
+ *@dest: copie of the string
+ *@src: origin of the string
+ *Return: dest destine copie
+ */
+char *_strcpy(char *dest, char *src)
+{
+int i;
+
+for (i = 0; src[i] != '\0'; i++)
+{
+dest[i] = src[i];
+}
+dest[i] = '\0';
+return (dest);
+}
+/**
+ * new_dog - function that creates a new dog
+ *@name: name of the dog
+ *@age: age of the dog
+ *@owner: name of owner of the dog
+ *Return: dog created
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-dog_t *new_name;
-char *copy_name, *copy_owner;
-unsigned int x, name_len = 0, owner_len = 0;
+dog_t *new_dog;
+char *cname, *cowner;
 
-new_name = malloc(sizeof(dog_t));
-if (name == NULL)
+new_dog = malloc(sizeof(struct dog));
+
+if (new_dog == NULL)
 return (NULL);
-if (name == NULL || age <= 0 || owner == NULL)
+
+cname = malloc(sizeof(char *) * (_strlen(name) + 1));
+
+if (cname == NULL)
 {
-free(new_name);
+free(cname);
+free(new_dog);
 return (NULL);
 }
 
-for (x = 0; name[x] != '\0'; x++)
-name_len++;
+cname = _strcpy(cname, name);
 
-for (x = 0; owner[x] != '\0'; x++)
-owner_len++;
-
-copy_name = malloc(sizeof(char) * (name_len + 1));
-if (copy_name == NULL)
+cowner = malloc(sizeof(char *) * (_strlen(owner) + 1));
+if (cowner == NULL)
+{
+free(cowner);
+free(cname);
+free(new_dog);
 return (NULL);
+}
 
-copy_owner = malloc(sizeof(char) * (owner_len + 1));
-if (copy_owner == NULL)
-return (NULL);
+cowner = _strcpy(cowner, owner);
 
-for (x = 0; x <= name_len; x++)
-copy_name[x] = name[x];
+new_dog->name = cname;
+new_dog->age = age;
+new_dog->owner = cowner;
 
-for (x = 0; x <= owner_len; x++)
-copy_owner[x] = owner[x];
-
-new_name->name = copy_name;
-new_name->owner = copy_owner;
-new_name->age = age;
-return (new_name);
+return (new_dog);
 }
