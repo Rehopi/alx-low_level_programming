@@ -18,7 +18,7 @@ va_start(valist, format);
 
 while (format && format[i])
 i++;
-
+  
 while (format && format[n])
 {
 if (n  == (i - 1))
@@ -27,7 +27,7 @@ sep = "";
 }
 switch (format[n])
 {
-case 'c';
+case 'c': 
 printf("%c%s", va_arg(valist, int), sep);
 break;
 case 'i':
