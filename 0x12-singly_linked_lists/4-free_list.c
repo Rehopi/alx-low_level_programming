@@ -1,9 +1,12 @@
 #include "lists.h"
+#include <stdlib.h>
+
 /**
- * free_list - deallocate memory to all node of a list
- * @head: first element of the list
+ * free_list - frees a list_t list
+ * @head: the beginning of the list to free
  * Return: Nothing
  */
+
 void free_list(list_t *head)
 {
 	list_t *next;
