@@ -1,21 +1,21 @@
 #include "lists.h"
+#include <stdio.h>
 /**
  * print_listint - prints all the elements of a listint_t list
  * @h: head of the list
  *
  * Return: the number of nobes
  */
+
 size_t print_listint(const listint_t *h)
 {
-	size_t num_nobes = 0;
+	size_t counter = 0;
 
-	while (h != NULL)
+	while(h)
 	{
-		printf("%d\n", h->n); /* autofills 0 if no int value given */
-
-		num_nodes += 1;
+		printf("%i\n", h->n);
 		h = h->next;
+		counter++;
 	}
-
-	return (num_nobes);
+	return (counter);
 }
