@@ -7,21 +7,15 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	listint_t *elem;
-	size_t num = 0;
+	size_t num_nobes = 0;
 
-	if (h == NULL)
-		return (num);
-	/*elem = malloc(sizeof(listint_t));
-	if (elem == NULL)
-        return (-1);*/
-        elem = (listint_t *) h;
-	while (elem != NULL)
+	while (h != NULL)
 	{
-		prinf("%d\n", elem->n);
-		num++;
-		elem = elem->next;
+		printf("%d\n", h->n); /* autofills 0 if no int value given */
+
+		num_nodes += 1;
+		h = h->next;
 	}
-	/*free(elem);*/
-	return (num);
+
+	return (num_nobes);
 }
