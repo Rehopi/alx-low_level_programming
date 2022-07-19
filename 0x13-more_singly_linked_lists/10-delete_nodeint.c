@@ -16,7 +16,7 @@ unsigned int counter = 0;
 temp = *head;
 
 if (*head == NULL)
-return(-1);
+return (-1);
 if (index == 0)
 {
 *head = temp->next;
