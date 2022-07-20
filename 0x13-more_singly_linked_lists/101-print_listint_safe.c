@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
  * print_listint_safe - prints a listint_t linked list
- * @head: const listint_t pointer input
- * Return: the number of nodes in the list
+ * @h: pointer to first node of list
+ * Return:  num of elements
  */
 size_t print_listint_safe(const listint_t *head)
 {
