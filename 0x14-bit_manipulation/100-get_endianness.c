@@ -3,7 +3,7 @@
 /**
  * get_endianness - checks the endianness.
  * Return: 0 if big endian, 1 if little endian
- * copyright: Samuel Okechukwu 
+ * copyright: Samuel Okechukwu
  */
 int get_endianness(void)
 {
