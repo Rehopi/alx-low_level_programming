@@ -6,7 +6,7 @@
  *Return: 1 if succeed or -1 if fail.
  */
 int set_bit(unsigned long int *n, unsigned int index)
-{  
+{
 unsigned int mask;
 
 if (index > 64)
