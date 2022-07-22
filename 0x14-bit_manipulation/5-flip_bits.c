@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * flip_bits - Returns the number of bits to convert in the second
- * number 
+ * number
  * @n: first number
  * @m: second number
  * Return: the number of bytes to flip
@@ -12,6 +12,7 @@ unsigned long int i;
 unsigned int to_ret;
 
 i = n ^ m;
+
 to_ret = 0;
 while (i > 0)
 {
