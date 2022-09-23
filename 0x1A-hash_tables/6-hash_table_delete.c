@@ -1,7 +1,8 @@
 #include "hash_tables.h"
 /**
- * hash_table_delete - function that deletes a hash table
- * @ht: hash_table_t pointer input
+ * hash_table_delete - deletes a hash table
+ * 
+ * @ht: pointer to hash table data structure
  * Return: void
  */
 void hash_table_delete(hash_table_t *ht)
@@ -14,7 +15,7 @@ void hash_table_delete(hash_table_t *ht)
 		return;
 	for (i = 0; i < aux->size; i++)
 	{
-		tmp = ht->array[i];
+		head = ht->array[i];
 		while (head != NULL)
 		{
 			tmp = head->next;
