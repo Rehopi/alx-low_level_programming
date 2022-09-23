@@ -1,10 +1,11 @@
 #include "hash_tables.h"
+
 /**
- * hash_table_delete - deletes a hash table
- *
- * @ht: pointer to hash table data structure
- * Return: void 
+ * hash_table_delete - function that deletes a hash table
+ * @ht: hash_table_t pointer input
+ * Return: Nothing
  */
+
 void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int i, aux_size;
